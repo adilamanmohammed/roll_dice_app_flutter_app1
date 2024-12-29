@@ -10,9 +10,14 @@ void main() {
   // visit and learn about widgets links : https://api.flutter.dev/flutter/widgets/const-constructors.html
   // Scaffold() is a widget that provides a framework for implementing the basic material design layout structure
   // short cut for formatting the code is (Alt + Shift + F)
+  // crl + space for auto suggestion of code helps to write code faster
+  // widgets = objects that represent the UI of the app
   runApp(
     const MaterialApp(
       home: Scaffold(
+        // If you hover over the Color class, you will see that it is a class that represents a color. The Color class has a static method called fromARGB() that creates a color from an alpha, red, green, and blue value.
+        //Then you can change the background color of the app by setting the backgroundColor property of the Scaffold widget to the color you created.
+        backgroundColor: Color.fromARGB(255, 200, 168, 255),
         body: Center(
           child: Text('Hello World!'),
         ),
