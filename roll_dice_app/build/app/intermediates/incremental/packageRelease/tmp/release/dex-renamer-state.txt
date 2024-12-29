@@ -1,0 +1,4 @@
+#Sun Dec 29 00:35:45 PST 2024
+base.0=/Users/adilamanmohammed/Documents/Projects/Flutter_Projects/roll_dice_app_flutter_app1/roll_dice_app/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
