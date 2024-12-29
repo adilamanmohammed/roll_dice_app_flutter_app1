@@ -30,17 +30,25 @@ void main() {
               // syntax: [Color.fromARGB(alpha, red, green, blue), Color.fromARGB(alpha, red, green, blue)]
               colors: [
                 // here we are creating a gradient that changes color from pink to purple
-                const Color.fromARGB(255, 225, 97, 250),
-                const Color.fromARGB(255, 246, 187, 246),
+                const Color.fromARGB(255, 43, 38, 38),
+                const Color.fromARGB(255, 30, 26, 245),
               ],
               // begin is a property of the LinearGradient class that allows you to specify the starting point of the gradient
               begin: Alignment.topLeft,
-              // end is a property of the LinearGradient class that allows you to specify the ending point of the gradient
+              //  end is a property of the LinearGradient class that allows you to specify the ending point of the gradient
               end: Alignment.bottomRight,
             )
           ),
           child: const Center(
-            child: Text('Hello World!'),
+            // Text() is a widget that displays text
+            // style is a property of the Text widget that allows you to customize the appearance of the text
+            // TextStyle() is a class that allows you to customize the appearance of the text
+            child: Text('Hello World!', style: TextStyle(
+              // color is a property of the TextStyle class that allows you to specify the color of the text
+              color: Colors.white,
+              // fontSize is a property of the TextStyle class that allows you to specify the size of the text
+              fontSize: 28.0,
+            ),),
           ),
         ),
       ),
