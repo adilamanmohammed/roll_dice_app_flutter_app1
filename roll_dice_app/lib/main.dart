@@ -13,13 +13,35 @@ void main() {
   // crl + space for auto suggestion of code helps to write code faster
   // widgets = objects that represent the UI of the app
   runApp(
-    const MaterialApp(
+     MaterialApp(
       home: Scaffold(
         // If you hover over the Color class, you will see that it is a class that represents a color. The Color class has a static method called fromARGB() that creates a color from an alpha, red, green, and blue value.
         //Then you can change the background color of the app by setting the backgroundColor property of the Scaffold widget to the color you created.
-        backgroundColor: Color.fromARGB(255, 200, 168, 255),
-        body: Center(
-          child: Text('Hello World!'),
+        // Container() is a widget that allows you to customize the appearance of its child widget
+        // Doesn't support const constructor
+        body: Container(
+          // decoration is a property of the Container widget that allows you to customize the appearance of the container
+            // BoxDecoration() is a class that allows you to customize the appearance of the container
+          decoration: BoxDecoration(
+            // gradient is a property of the BoxDecoration class that allows you to create a gradient
+             // linear gradient is a type of gradient that creates a gradient that changes color in a straight line
+            gradient: LinearGradient(
+              // colors is a property of the LinearGradient class that allows you to specify the colors of the gradient
+              // syntax: [Color.fromARGB(alpha, red, green, blue), Color.fromARGB(alpha, red, green, blue)]
+              colors: [
+                // here we are creating a gradient that changes color from pink to purple
+                const Color.fromARGB(255, 225, 97, 250),
+                const Color.fromARGB(255, 246, 187, 246),
+              ],
+              // begin is a property of the LinearGradient class that allows you to specify the starting point of the gradient
+              begin: Alignment.topLeft,
+              // end is a property of the LinearGradient class that allows you to specify the ending point of the gradient
+              end: Alignment.bottomRight,
+            )
+          ),
+          child: const Center(
+            child: Text('Hello World!'),
+          ),
         ),
       ),
     ),
